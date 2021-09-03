@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@+id/start"
+        motion:duration="500"
+        motion:motionInterpolator="linear" >
+
+    </Transition>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@id/sideMenuBackLayout"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="18dp"
+            android:layout_marginEnd="16dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:scaleX="1.0"
+            android:scaleY="1.0"/>
+
+        <Constraint
+            android:id="@id/myPageLayout"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginTop="34dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            motion:layout_constraintTop_toBottomOf="@id/sideMenuBackLayout"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintVertical_bias="0.0" />
+
+        <Constraint
+            android:id="@id/settingLayout"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            motion:layout_constraintTop_toBottomOf="@id/myPageLayout"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintVertical_bias="0.0" />
+
+        <Constraint
+            android:id="@id/logoutLayout"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            motion:layout_constraintTop_toBottomOf="@id/settingLayout"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintVertical_bias="0.0" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@id/sideMenuBackLayout"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:scaleX="0.0"
+            android:scaleY="0.0" />
+
+        <Constraint
+            android:id="@id/myPageLayout"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            motion:layout_constraintTop_toBottomOf="@id/sideMenuBackLayout"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:rotation="-90"
+            android:translationY="-50dp"
+            android:translationX="130dp"
+            android:scaleX="0.0"
+            android:scaleY="0.0"/>
+
+        <Constraint
+            android:id="@id/settingLayout"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            motion:layout_constraintTop_toBottomOf="@id/myPageLayout"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:rotation="-90"
+            android:translationY="-100dp"
+            android:translationX="130dp"
+            android:scaleX="0.0"
+            android:scaleY="0.0"/>
+
+        <Constraint
+            android:id="@id/logoutLayout"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            motion:layout_constraintTop_toBottomOf="@id/settingLayout"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:rotation="-90"
+            android:translationY="-150dp"
+            android:translationX="130dp"
+            android:scaleX="0.0"
+            android:scaleY="0.0"/>
+
+
+    </ConstraintSet>
+</MotionScene>
