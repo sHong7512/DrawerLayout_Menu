@@ -24,7 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
-                android:text="안녕하세요."
+                android:text="Hi~"
                 android:textColor="@color/black"
                 android:textSize="14dp" />
 
@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
-                android:text="김엔젤님"
+                android:text="sHong!"
                 android:textColor="@color/black"
                 android:textSize="16dp" />
 
@@ -63,16 +63,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="이번달 근무 시간"
+                    android:text="part - 1"
                     android:textColor="@color/black"
                     android:textSize="12dp" />
 
                 <TextView
-                    android:id="@+id/workTimeTotalText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="end|center_vertical"
-                    android:text="0시간"
+                    android:text="content - 1"
                     android:textColor="@color/black"
                     android:textSize="12dp" />
 
@@ -95,16 +94,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="이번달 사용 휴가"
+                    android:text="part - 2"
                     android:textColor="@color/black"
                     android:textSize="12dp" />
 
                 <TextView
-                    android:id="@+id/vacationTotalText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="end|center_vertical"
-                    android:text="0일"
+                    android:text="content - 2"
                     android:textColor="@color/black"
                     android:textSize="12dp" />
 
@@ -123,7 +121,6 @@
         android:gravity="center">
 
         <ImageButton
-            android:id="@+id/arrowLeft"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:src="@drawable/arrow_left"
@@ -138,10 +135,9 @@
             android:gravity="center"
             android:layout_marginHorizontal="8dp"
             android:textSize="18dp"
-            android:text="2021년 7월" />
+            android:text="TextView" />
 
         <ImageButton
-            android:id="@+id/arrowRight"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:src="@drawable/arrow_right"

@@ -6,7 +6,7 @@ import android.view.View
 import androidx.constraintlayout.motion.widget.MotionLayout
 import androidx.drawerlayout.widget.DrawerLayout
 
-class DrawerContent @JvmOverloads constructor(
+open class DrawerContent @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : MotionLayout(context, attrs, defStyleAttr), DrawerLayout.DrawerListener {
     override fun onDrawerStateChanged(newState: Int) {
