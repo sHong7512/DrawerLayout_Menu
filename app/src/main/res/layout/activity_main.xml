@@ -1,18 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple_500"
+    android:background="@color/white"
     android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
-    <include layout="@layout/item_main" />
+    <include
+        android:id="@+id/mainItem"
+        layout="@layout/item_main" />
 
-    <include layout="@layout/item_sidemenu" />
+    <include
+        android:id="@+id/leftMenuItem"
+        layout="@layout/item_leftmenu" />
 
-    <include layout="@layout/item_searchmenu" />
+    <include
+        android:id="@+id/rightMenuItem"
+        layout="@layout/item_rightmenu" />
 
 </androidx.drawerlayout.widget.DrawerLayout>

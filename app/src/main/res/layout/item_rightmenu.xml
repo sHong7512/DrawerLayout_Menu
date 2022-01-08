@@ -4,18 +4,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="200dp"
     android:layout_height="match_parent"
-    android:layout_gravity="start"
-    android:id="@+id/sideMenuLayout"
-    app:layoutDescription="@xml/item_sidemenu_scene"
+    android:layout_gravity="end"
+    android:id="@+id/rightMenuLayout"
+    app:layoutDescription="@xml/item_rightmenu_scene"
     android:background="@color/white">
 
     <LinearLayout
-        android:id="@+id/sideMenuBackLayout"
+        android:id="@+id/rightMenuBackLayout"
         android:layout_width="match_parent"
         android:layout_height="32dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="18dp"
-        android:gravity="end|top"
+        android:gravity="start|top"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -24,94 +24,86 @@
             android:id="@+id/backButton"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:src="@drawable/btn_ic_back" />
+            android:background="@drawable/btn_ic_back"
+            android:rotation="180" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/myPageLayout"
+        android:id="@+id/rightLayout1"
         android:layout_width="match_parent"
         android:layout_height="24dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="34dp"
         android:orientation="horizontal"
-        app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sideMenuBackLayout">
+        app:layout_constraintTop_toBottomOf="@id/rightMenuBackLayout">
 
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/btn_ic_user" />
+            android:src="@drawable/ic_launcher_foreground" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="24dp"
             android:layout_marginStart="8dp"
             android:gravity="center_vertical"
-            android:fontFamily="@font/spoqahansansneo_regular"
-            android:text="마이페이지"
+            android:text="서치1"
             android:textColor="@color/black"
             android:textSize="16dp" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/settingLayout"
+        android:id="@+id/rightLayout2"
         android:layout_width="match_parent"
         android:layout_height="24dp"
-        android:layout_marginTop="30dp"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="30dp"
         android:orientation="horizontal"
-        app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintTop_toBottomOf="@id/myPageLayout"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rightLayout1">
 
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/btn_ic_setting"/>
+            android:src="@drawable/ic_launcher_foreground" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="24dp"
             android:layout_marginStart="8dp"
             android:gravity="center_vertical"
-            android:text="설정"
-            android:fontFamily="@font/spoqahansansneo_regular"
-            android:textSize="17dp"
-            android:textColor="@color/black" />
+            android:text="서치2"
+            android:textColor="@color/black"
+            android:textSize="17dp" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/logoutLayout"
+        android:id="@+id/rightLayout3"
         android:layout_width="match_parent"
         android:layout_height="24dp"
-        android:layout_marginTop="30dp"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="30dp"
         android:orientation="horizontal"
-        app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintTop_toBottomOf="@id/settingLayout"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rightLayout2">
 
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/btn_ic_logout"/>
+            android:src="@drawable/ic_launcher_foreground" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="24dp"
             android:layout_marginStart="8dp"
             android:gravity="center_vertical"
-            android:text="로그아웃"
-            android:fontFamily="@font/spoqahansansneo_regular"
-            android:textSize="17dp"
-            android:textColor="@color/black" />
+            android:text="서치3"
+            android:textColor="@color/black"
+            android:textSize="17dp" />
 
     </LinearLayout>
 

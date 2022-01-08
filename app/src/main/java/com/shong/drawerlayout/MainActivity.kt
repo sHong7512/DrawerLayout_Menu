@@ -2,48 +2,39 @@ package com.shong.drawerlayout
 
 import android.os.Bundle
 import android.view.View
-import android.widget.ImageButton
-import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
+import com.shong.drawerlayout.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        val binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val drawerLayout = findViewById<DrawerLayout>(R.id.drawerLayout)
-
-        val sideMenuLayout = findViewById<DrawerContent>(R.id.sideMenuLayout)
-        val sideMenuImageButton = findViewById<ImageButton>(R.id.sideMenu)
-        val sideMenuBackLayout = findViewById<LinearLayout>(R.id.sideMenuBackLayout)
-
-        val searchMenuLayout = findViewById<DrawerContent>(R.id.searchMenuLayout)
-        val searchMenuImageButton = findViewById<ImageButton>(R.id.searchMenu)
-        val searchMenuBackLayout = findViewById<LinearLayout>(R.id.searchMenuBackLayout)
-
-        sideMenuImageButton.setOnClickListener {
-            drawerLayout.openDrawer(sideMenuLayout)
+        binding.mainItem.leftMenuButton.setOnClickListener {
+            binding.drawerLayout.openDrawer(binding.leftMenuItem.leftMenuLayout)
         }
-        sideMenuBackLayout.setOnClickListener {
-            drawerLayout.closeDrawer(sideMenuLayout)
+        binding.leftMenuItem.leftMenuBackLayout.setOnClickListener {
+            binding.drawerLayout.closeDrawer(binding.leftMenuItem.leftMenuLayout)
         }
-        searchMenuImageButton.setOnClickListener {
-            drawerLayout.openDrawer(searchMenuLayout)
+        binding.mainItem.rightMenuButton.setOnClickListener {
+            binding.drawerLayout.openDrawer(binding.rightMenuItem.rightMenuLayout)
         }
-        searchMenuBackLayout.setOnClickListener {
-            drawerLayout.closeDrawer(searchMenuLayout)
+        binding.rightMenuItem.rightMenuBackLayout.setOnClickListener {
+            binding.drawerLayout.closeDrawer(binding.rightMenuItem.rightMenuLayout)
         }
 
-        drawerLayout.addDrawerListener(object : DrawerContent(this) {
+        binding.drawerLayout.addDrawerListener(object : DrawerContent(this) {
             override fun onDrawerOpened(drawerView: View) {
                 super.onDrawerOpened(drawerView)
                 when (drawerView) {
-                    searchMenuLayout -> {
-                        drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED, sideMenuLayout)
+                    binding.rightMenuItem.rightMenuLayout -> {
+                        binding.drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED, binding.leftMenuItem.leftMenuLayout)
                     }
-                    sideMenuLayout ->{
-                        drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED, searchMenuLayout)
+                    binding.leftMenuItem.leftMenuLayout ->{
+                        binding.drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED, binding.rightMenuItem.rightMenuLayout)
                     }
                 }
             }
@@ -51,11 +42,11 @@ class MainActivity : AppCompatActivity() {
             override fun onDrawerClosed(drawerView: View) {
                 super.onDrawerClosed(drawerView)
                 when (drawerView) {
-                    searchMenuLayout -> {
-                        drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED, sideMenuLayout)
+                    binding.rightMenuItem.rightMenuLayout -> {
+                        binding.drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED, binding.leftMenuItem.leftMenuLayout)
                     }
-                    sideMenuLayout ->{
-                        drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED, searchMenuLayout)
+                    binding.leftMenuItem.leftMenuLayout ->{
+                        binding.drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED, binding.rightMenuItem.rightMenuLayout)
                     }
                 }
             }

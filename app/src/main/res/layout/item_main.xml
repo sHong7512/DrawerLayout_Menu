@@ -52,7 +52,7 @@
                     app:layout_collapseMode="pin">
 
                     <ImageButton
-                        android:id="@+id/sideMenu"
+                        android:id="@+id/leftMenuButton"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:background="@drawable/basic_ripple"
@@ -99,7 +99,7 @@
                     </LinearLayout>
 
                     <ImageButton
-                        android:id="@+id/searchMenu"
+                        android:id="@+id/rightMenuButton"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:background="@drawable/basic_ripple"
